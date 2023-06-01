@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pwa.js: Turn a website into a PWA</title>
+        
+        <meta name="description" content="Turn a website into a PWA.">
+        <meta property="og:image" content="https://screenshot.jamesg.blog/?url=https://capjamesg.github.io/pwa.js/">
+
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="/">pwa.js</a></li>
+                <li><a href="https://jamesg.blog">Made by capjamesg</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1>pwa.js</h1>
+
+            <p>Turn a website into a PWA.</p>
+
+            <img src="pwa.gif" alt="pwa.js in action">
+
+            <h2>How it works</h2>
+
+            <p><code>pwa.js</code> is a script you can add to a website.</p>
+            
+            <p>After loading, the script will add an event listener to all <code>a</code> tags on the page. When an <code>a</code> link is clicked, <code>pwa.js</code> makes a request to the link destination, parses the document HTML, and replaces a specified part of the current page with a specified part from the new page.</p>
+
+            <p>You can use <code>pwa.js</code> to enable persistence across your website. You can have an element (i.e. a notes section) that loads on one page and let a user take that video with them through the site.</p>
+
+            <h2>Setup</h2>
+
+            <p>First, add the <code>pwa.js</code> script to your website. You can find the script in the <a href="https://github.com/capjamesg/pwa.js">GitHub repository</a>.</p>
+
+            <p>Out of the box, the script will replace the element with the ID <code>main</code> of a given page with the contents of the same element in a target page.</p>
+
+            <p>We recommend wrapping the main body of a page that will change between pages (i.e. the contents between the navigation bar and footer).</p>
+
+            <footer>
+                <p>pwa.js was made with ❤️, 🧇 and ☕️ by <a href="https://jamesg.blog">capjamesg</a>. <a href="https://github.com/capjamesg/pwa.js">View source</a>.</p>
+            </footer>
+        </main>
+    </body>
+</html>
