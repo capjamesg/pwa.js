@@ -2,6 +2,8 @@
 
 A utility script for turning a web page into a PWA.
 
+![pwa.gif](pwa.gif)
+
 ## License
 
 This project is licensed under an [MIT 0 License](LICENSE).
