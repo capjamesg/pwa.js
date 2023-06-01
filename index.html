@@ -34,12 +34,32 @@
 
             <p>First, add the <code>pwa.js</code> script to your website. You can find the script in the <a href="https://github.com/capjamesg/pwa.js">GitHub repository</a>.</p>
 
+            <p>Add the script below the closing <code>body</code> tag.</p>
+
+            <pre><code>&lt;script src="pwa.js"&gt;&lt;/script&gt;</code></pre>
+
             <p>Out of the box, the script will replace the element with the ID <code>main</code> of a given page with the contents of the same element in a target page.</p>
 
             <p>We recommend wrapping the main body of a page that will change between pages (i.e. the contents between the navigation bar and footer).</p>
 
+            <p>You can change the target element by replacing the <code>main</code> ID in the script with the ID of the element you want to replace.</p>
+
+            <pre>
+                <code>
+const SELECTOR = '#main';
+                </code>
+            </pre>
+
+            <p>By default, <code>pwa.js</code> will replace the <code>head</code> tag when you navigate between pages on a website. You can override this behaviour by changing the <code>RENDER_HEAD</code> constant to <code>false</code>.</p>
+
+            <p><code>pwa.js</code> sends a <code>X-Headless</code> HTTP header to the server when it makes a request to a page. You can use this header to detect if a request is coming from <code>pwa.js</code> and return a different response (i.e. only return page body, rather than the full document). This will make pwa.js faster because less text needs to be sent over the wire and parsed into a DOM for use in the app. If you send a headless version, you cannot replace document heads with the <code>RENDER_HEAD</code> option.</p>
+
+            <h2>SEO Considerations</h2>
+
+            <p><code>pwa.js</code> does not replace link anchors with other text; rather, the script adds an event listener to the <code>click</code> event of all <code>a</code> tags on the page. This means that search engines will still be able to crawl your website and index it.</p>
+
             <footer>
-                <p>pwa.js was made with ❤️, 🧇 and ☕️ by <a href="https://jamesg.blog">capjamesg</a>. <a href="https://github.com/capjamesg/pwa.js">View source</a>.</p>
+                <p>pwa.js was made with ❤️, 🧇 and ☕️. <a href="https://github.com/capjamesg/pwa.js">View source</a>.</p>
             </footer>
         </main>
     </body>
